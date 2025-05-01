@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Year in Network Marketing: Ultimate Action Plan (Dark Mode Enabled)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap');
+
+        :root {
+            /* Light Mode Colors */
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --accent-color: #ffc107;
+            --text-dark: #212529; /* Darker text for light mode */
+            --text-light: #f8f9fa;
+            --background-light: #ffffff;
+            --background-medium: #f1f3f5;
+            --background-card: #ffffff;
+            --border-color: #e0e0e0;
+            --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --heading-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            --script-bg: #e9ecef;
+            --script-border: var(--primary-color);
+            --script-caption-bg: #f0fff4; /* Light green */
+            --script-caption-border: var(--secondary-color);
+
+            /* Dark Mode Colors (Defined but applied via media query) */
+            --primary-color-dm: #4dabf7; /* Lighter Blue */
+            --secondary-color-dm: #40c057; /* Lighter Green */
+            --accent-color-dm: #ffd43b; /* Brighter Yellow */
+            --text-dark-dm: #e9ecef; /* Light Gray for text */
+            --text-light-dm: #121212; /* Dark text for contrast on light elements */
+            --background-light-dm: #121212; /* Very Dark Gray/Black */
+            --background-medium-dm: #1c1c1c; /* Slightly Lighter Dark */
+            --background-card-dm: #2a2a2a; /* Card Background */
+            --border-color-dm: #444;
+            --card-shadow-dm: 0 5px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+            --heading-text-shadow-dm: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            --script-bg-dm: #3a3a3a;
+            --script-border-dm: var(--primary-color-dm);
+            --script-caption-bg-dm: #2a4a3a; /* Darker green */
+            --script-caption-border-dm: var(--secondary-color-dm);
+
+            /* Universal Settings */
+            --border-radius: 10px; /* Slightly more rounded */
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8; /* Slightly increased line height */
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            padding-bottom: 50px;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            /* Gradient remains vibrant */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light); /* Always light text on gradient */
+            padding: 70px 20px; /* More padding */
+            text-align: center;
+            margin-bottom: 50px; /* Increased margin */
+            border-bottom-left-radius: 60% 25px;
+            border-bottom-right-radius: 60% 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem; /* Larger H1 */
+            margin-bottom: 20px;
+            text-shadow: var(--heading-text-shadow); /* Use variable */
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem; /* Larger subtitle */
+            max-width: 750px;
+            margin: 0 auto;
+            opacity: 0.95; /* Slightly less opaque */
+            font-weight: 300;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            margin-bottom: 60px; /* More space between sections */
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color var(--transition-speed) ease;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem; /* Larger H2 */
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 45px; /* More space below H2 */
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+            text-shadow: var(--heading-text-shadow);
+            transition: color var(--transition-speed) ease;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px; /* Wider underline */
+            height: 5px; /* Thicker underline */
+            background-color: var(--accent-color);
+            border-radius: 3px;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        h3 {
+            font-size: 1.8rem; /* Larger H3 */
+            color: var(--secondary-color);
+            margin-top: 35px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color); /* Thicker border */
+            padding-left: 20px;
+            font-weight: 600;
+             transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+
+        p {
+            margin-bottom: 18px; /* More space below paragraphs */
+            font-size: 1.05rem; /* Slightly larger base text */
+        }
+
+        strong {
+            font-weight: 600; /* Make strong text stand out more */
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px; /* More space between list items */
+            position: relative;
+            padding-left: 35px; /* More padding for icon */
+        }
+
+        li i {
+            position: absolute;
+            left: 0;
+            top: 7px; /* Adjusted for line-height */
+            color: var(--secondary-color);
+            font-size: 1.2rem; /* Larger icons */
+             transition: color var(--transition-speed) ease;
+        }
+
+        /* --- Cards for Actionable Items --- */
+        .card {
+            background-color: var(--background-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 30px; /* More padding */
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed) ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px); /* More lift on hover */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18); /* Enhanced hover shadow */
+        }
+
+        .card h4 {
+            font-size: 1.4rem; /* Larger H4 */
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+             transition: color var(--transition-speed) ease;
+        }
+
+        .card h4 i {
+            margin-right: 12px;
+            color: var(--accent-color); /* Icon color matches H2 underline */
+            font-size: 1.3rem;
+             transition: color var(--transition-speed) ease;
+        }
+
+        /* --- Specific Section Styles --- */
+
+        /* Key Takeaways */
+        #takeaways ul li i { color: var(--primary-color); }
+
+        /* 90-Day Plan */
+        .phase {
+            background-color: var(--background-medium);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border-left: 6px solid var(--secondary-color);
+            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+        .phase h4 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            transition: color var(--transition-speed) ease;
+        }
+        .phase ul li i { color: var(--secondary-color); }
+
+        /* Daily Checklist */
+        #checklist .card h4 i { color: #fd7e14; }
+        #checklist ul li i { color: #fd7e14; }
+
+        /* Script Templates */
+        .script-category { margin-bottom: 30px; }
+        .script-template {
+            background-color: var(--script-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--script-border);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem; /* Slightly larger script text */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+        .script-template strong {
+            color: var(--script-border); /* Make keyword stand out */
+            font-weight: bold;
+        }
+        .script-template i {
+            margin-right: 10px;
+            color: var(--script-border); /* Icon matches border */
+        }
+
+        /* Captions use different bg/border */
+         #captions .script-template {
+            background-color: var(--script-caption-bg);
+            border-left-color: var(--script-caption-border);
+         }
+         #captions .script-template strong { color: var(--script-caption-border); }
+         #captions .script-template i { color: var(--script-caption-border); }
+
+
+        /* Automated Follow-ups */
+        #automation .card h4 i { color: #ae3ec9; } /* Vibrant Purple */
+        #automation ul li i { color: #ae3ec9; }
+        .follow-up-sequence { margin-top: 20px; }
+        .follow-up-day {
+            margin-bottom: 12px;
+            padding: 12px 15px;
+            background-color: var(--background-medium); /* Use medium bg */
+            border-radius: 6px; /* Smaller radius for inner elements */
+            transition: background-color var(--transition-speed) ease;
+        }
+        .follow-up-day strong {
+             color: var(--secondary-color);
+             transition: color var(--transition-speed) ease;
+        }
+
+        /* Social Media Content */
+        #social-media .card h4 i { color: #f03e3e; } /* Vibrant Red */
+        #social-media ul li i { color: #f03e3e; }
+        .content-pillar { margin-bottom: 18px; }
+        .content-pillar strong { color: var(--primary-color); transition: color var(--transition-speed) ease;}
+
+        /* Content Calendar */
+        .calendar-week { margin-bottom: 35px; }
+        .calendar-day {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            padding: 20px;
+            background-color: var(--background-card); /* Use card bg */
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07); /* Subtle shadow */
+            border-left: 5px solid var(--accent-color);
+             transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+        .calendar-day-num {
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 65px;
+            padding-right: 18px;
+            font-size: 1.15rem;
+            transition: color var(--transition-speed) ease;
+        }
+        .calendar-day-content strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+            font-weight: 600;
+             transition: color var(--transition-speed) ease;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), #ff9800);
+            color: #111; /* Dark text for high contrast on yellow */
+            padding: 18px 40px; /* Larger button */
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background var(--transition-speed) ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: none; /* Remove border */
+        }
+
+        .cta-button:hover {
+            transform: scale(1.08) translateY(-3px); /* More pronounced hover effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .final-cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 50px 25px;
+            background-color: var(--background-medium);
+            border-radius: var(--border-radius);
+             transition: background-color var(--transition-speed) ease;
+        }
+        .final-cta h3 {
+           border-left: none;
+           padding-left: 0;
+           font-size: 2rem; /* Larger final CTA heading */
+           color: var(--primary-color);
+           margin-bottom: 15px;
+            transition: color var(--transition-speed) ease;
+        }
+
+        /* --- DARK MODE STYLES --- */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: var(--text-dark-dm);
+                background-color: var(--background-light-dm);
+            }
+
+            .hero {
+                 /* Keep gradient, maybe slightly adjust if needed, but often looks good */
+                 box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Darker shadow for hero */
+            }
+             .hero h1, .hero p {
+                 color: var(--text-light); /* Ensure hero text remains light */
+             }
+
+            h2 {
+                color: var(--primary-color-dm);
+                text-shadow: var(--heading-text-shadow-dm);
+            }
+            h2::after { background-color: var(--accent-color-dm); }
+
+            h3 {
+                color: var(--secondary-color-dm);
+                border-left-color: var(--accent-color-dm);
+            }
+
+            section { border-bottom-color: var(--border-color-dm); }
+
+            .card {
+                background-color: var(--background-card-dm);
+                box-shadow: var(--card-shadow-dm);
+            }
+             .card:hover {
+                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Adjusted hover shadow */
+             }
+             .card h4 { color: var(--primary-color-dm); }
+             .card h4 i { color: var(--accent-color-dm); }
+
+             #takeaways ul li i { color: var(--primary-color-dm); }
+
+            .phase {
+                background-color: var(--background-medium-dm);
+                border-left-color: var(--secondary-color-dm);
+            }
+            .phase h4 { color: var(--secondary-color-dm); }
+            .phase ul li i { color: var(--secondary-color-dm); }
+
+             #checklist .card h4 i { color: #ff922b; } /* Brighter Orange */
+             #checklist ul li i { color: #ff922b; }
+
+             .script-template {
+                background-color: var(--script-bg-dm);
+                border-left-color: var(--script-border-dm);
+                color: var(--text-dark-dm); /* Ensure script text is light */
+             }
+             .script-template strong { color: var(--script-border-dm); }
+             .script-template i { color: var(--script-border-dm); }
+
+             #captions .script-template {
+                background-color: var(--script-caption-bg-dm);
+                border-left-color: var(--script-caption-border-dm);
+             }
+              #captions .script-template strong { color: var(--script-caption-border-dm); }
+              #captions .script-template i { color: var(--script-caption-border-dm); }
+
+
+             #automation .card h4 i { color: #be4bdb; } /* Brighter Purple */
+             #automation ul li i { color: #be4bdb; }
+             .follow-up-day { background-color: var(--background-medium-dm); }
+             .follow-up-day strong { color: var(--secondary-color-dm); }
+
+             #social-media .card h4 i { color: #ff6b6b; } /* Brighter Red */
+             #social-media ul li i { color: #ff6b6b; }
+             .content-pillar strong { color: var(--primary-color-dm); }
+
+             .calendar-day {
+                background-color: var(--background-card-dm);
+                border-left-color: var(--accent-color-dm);
+                box-shadow: 0 3px 10px rgba(0,0,0,0.25); /* Adjusted calendar shadow */
+             }
+            .calendar-day-num { color: var(--primary-color-dm); }
+            .calendar-day-content strong { color: var(--secondary-color-dm); }
+
+            .cta-button {
+                /* Keep gradient, ensure text contrast */
+                color: #111; /* Dark text still works well on yellow/orange */
+                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+             .cta-button:hover {
+                 box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+             }
+
+            .final-cta { background-color: var(--background-medium-dm); }
+            .final-cta h3 { color: var(--primary-color-dm); }
+        }
+
+
+        /* Responsive Design (Keep previous adjustments) */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; }
+            .hero p { font-size: 1.1rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.6rem; }
+            .card { padding: 25px; }
+            .calendar-day { flex-direction: column; align-items: stretch; }
+            .calendar-day-num { min-width: auto; padding-right: 0; margin-bottom: 12px; }
+        }
+
+        @media (max-width: 480px) {
+             .hero h1 { font-size: 2rem; }
+             .hero p { font-size: 1rem; }
+             h2 { font-size: 1.8rem; }
+             h3 { font-size: 1.4rem; }
+             .container { padding: 0 15px; }
+             .cta-button { padding: 15px 35px; font-size: 1.1rem; }
+             li { padding-left: 30px; } /* Adjust list padding */
+             li i { top: 6px; font-size: 1.1rem;}
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1><i class="fas fa-rocket"></i> Launch Your Network Marketing Success!</h1>
+            <p>Your ultimate action plan, inspired by "Your First Year in Network Marketing". Turn principles into profit, starting today!</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Section 1: Key Takeaways -->
+        <section id="takeaways">
+            <h2><i class="fas fa-key"></i> Core Principles for Success</h2>
+            <div class="card">
+                <h4><i class="fas fa-brain"></i> 1. Master the Mindset</h4>
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Rejection is Normal:</strong> Don't take it personally. Persist!</li>
+                    <li><i class="fas fa-times-circle"></i> <strong>Avoid False Expectations:</strong> This takes time and consistent effort.</li>
+                    <li><i class="fas fa-lightbulb"></i> <strong>Stay Enthusiastic:</strong> Your energy is contagious. Guard it fiercely.</li>
+                    <li><i class="fas fa-ban"></i> <strong>No News Rule:</strong> Minimize negativity to maintain focus.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4><i class="fas fa-users-cog"></i> 2. Build a Strong Foundation</h4>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> <strong>Understand Attrition:</strong> People will quit. Keep recruiting.</li>
+                    <li><i class="fas fa-user-slash"></i> <strong>Avoid the Management Trap:</strong> Teach independence, lead by example.</li>
+                    <li><i class="fas fa-arrows-alt-h"></i> <strong>Go Wide, Not Just Deep:</strong> Constantly sponsor new people.</li>
+                </ul>
+            </div>
+             <div class="card">
+                <h4><i class="fas fa-bullseye"></i> 3. Effective Prospecting & Recruiting</h4>
+                <ul>
+                    <li><i class="fas fa-user-friends"></i> <strong>Warm vs. Cold Market:</strong> Understand the nuances; leverage both.</li>
+                    <li><i class="fas fa-comments"></i> <strong>Handle Objections Smartly:</strong> Acknowledge, pivot, don't argue.</li>
+                    <li><i class="fas fa-star"></i> <strong>Edify Your Upline:</strong> Leverage their credibility with prospects.</li>
+                </ul>
+            </div>
+             <div class="card">
+                <h4><i class="fas fa-exclamation-triangle"></i> 4. Avoid Common Mistakes</h4>
+                <ul>
+                    <li><i class="fas fa-volume-mute"></i> <strong>No Overhype:</strong> Be honest about the effort required.</li>
+                    <li><i class="fas fa-running"></i> <strong>Don’t Chase People:</strong> Focus on those who are interested.</li>
+                    <li><i class="fas fa-box-open"></i> <strong>No Buying-In for Others:</strong> Avoid front-loading inventory.</li>
+                </ul>
+            </div>
+             <div class="card">
+                <h4><i class="fas fa-crown"></i> 5. Leadership & Duplication</h4>
+                <ul>
+                    <li><i class="fas fa-flag"></i> <strong>Lead, Don't Push:</strong> Show, don't just tell.</li>
+                    <li><i class="fas fa-cogs"></i> <strong>Develop Systems:</strong> Create simple, repeatable processes.</li>
+                    <li><i class="fas fa-medal"></i> <strong>Celebrate Small Wins:</strong> Recognition fuels motivation.</li>
+                </ul>
+            </div>
+             <div class="card">
+                <h4><i class="fas fa-life-ring"></i> 6. Handling Setbacks</h4>
+                <ul>
+                    <li><i class="fas fa-user-tie"></i> <strong>Use Upline Support:</strong> Vent up, not down.</li>
+                    <li><i class="fas fa-book-open"></i> <strong>Keep Learning:</strong> Stay inspired through personal development.</li>
+                </ul>
+            </div>
+             <div class="card">
+                 <h4><i class="fas fa-calendar-alt"></i> 7. Long-Term Success Strategies</h4>
+                 <ul>
+                    <li><i class="fas fa-hourglass-half"></i> <strong>Commit to 4+ Years:</strong> Real success is a marathon, not a sprint.</li>
+                    <li><i class="fas fa-wallet"></i> <strong>Financial & Time Freedom:</strong> The true measure of MLM success.</li>
+                    <li><i class="fas fa-check-double"></i> <strong>Survive the First Year:</strong> Persistence pays off – aim for the long haul!</li>
+                 </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: 90-Day Action Plan -->
+        <section id="action-plan">
+             <h2><i class="fas fa-map-signs"></i> Your 90-Day IGNITE Action Plan</h2>
+             <p style="text-align: center; max-width: 800px; margin: -25px auto 40px auto; font-size: 1.1rem;">Follow this roadmap phase by phase to build unstoppable momentum and create lasting results.</p>
+
+             <div class="phase">
+                 <h4><i class="fas fa-rocket"></i> PHASE 1: MINDSET & PREPARATION (Days 1-7)</h4>
+                 <p><strong>Focus:</strong> Build an unshakable mental foundation.</p>
+                 <ul>
+                     <li><i class="fas fa-check-circle"></i> <strong>Accept Rejection:</strong> Internalize that 'no' is just part of the journey.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Set Realistic Goals:</strong> Define clear, achievable targets (e.g., sponsor 5 people in 30 days, daily calls).</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Fuel Enthusiasm:</strong> Daily personal development (books, podcasts).</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Eliminate Negativity:</strong> Avoid negative news and people.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Define Your WHY:</strong> Deeply connect with your core motivation.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Set Tangible Goals:</strong> Income, recruitment, daily activity targets.</li>
+                 </ul>
+             </div>
+
+             <div class="phase">
+                 <h4><i class="fas fa-fire"></i> PHASE 2: BUILDING YOUR BUSINESS (Days 8-30)</h4>
+                 <p><strong>Focus:</strong> Consistent action and mastering prospecting.</p>
+                  <ul>
+                     <li><i class="fas fa-check-circle"></i> <strong>Create Prospect List:</strong> Aim for 200+ names (categorize: Hot, Warm, Cold).</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Choose Prospecting Method:</strong> Social media, in-person, cold market – find your strength.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Master 3-Step Invitation:</strong> Curiosity -> Invite -> Follow Up. (Use voice/video!)</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Handle Objections Professionally:</strong> Learn responses to common concerns (pyramid, time, money).</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Power of Follow-Up:</strong> Schedule relentlessly; most sign-ups happen after 5+ contacts.</li>
+                 </ul>
+             </div>
+
+             <div class="phase">
+                 <h4><i class="fas fa-copy"></i> PHASE 3: DUPLICATION & LEADERSHIP (Days 31-60)</h4>
+                  <p><strong>Focus:</strong> Training your team and fostering independence.</p>
+                 <ul>
+                     <li><i class="fas fa-check-circle"></i> <strong>Avoid Management Trap:</strong> Train, don't babysit. Teach self-sufficiency.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Apply 80/20 Rule:</strong> 80% recruiting, 20% training.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Plug Into a Simple System:</strong> Weekly calls, daily power hours, team group.</li>
+                 </ul>
+             </div>
+
+             <div class="phase">
+                 <h4><i class="fas fa-chess-king"></i> PHASE 4: SCALING & LEADERSHIP (Days 61-90)</h4>
+                 <p><strong>Focus:</strong> Identifying and developing leaders.</p>
+                 <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Identify Key Leaders:</strong> Spot the active, coachable, and independent ones.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Leadership Development Plan:</strong> Assign responsibilities, encourage growth, teach duplication.</li>
+                 </ul>
+             </div>
+
+             <div class="phase">
+                 <h4><i class="fas fa-infinity"></i> BEYOND 90 DAYS: CONSISTENCY & LONG-TERM SUCCESS</h4>
+                 <p><strong>Focus:</strong> Building a sustainable, long-term business.</p>
+                 <ul>
+                     <li><i class="fas fa-check-circle"></i> <strong>Prospect Daily:</strong> Aim for 3-5 new contacts consistently.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Develop Leaders Continuously:</strong> Empower your frontline.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Track Your Numbers:</strong> Monitor KPIs (contacts, presentations, sign-ups, volume).</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Automate & Leverage Tools:</strong> Webinars, funnels, social media branding.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Attend Events & Recognize Success:</strong> Build belief and motivation.</li>
+                     <li><i class="fas fa-check-circle"></i> <strong>Be Consistent & DON'T QUIT:</strong> Persistence is the ultimate key.</li>
+                 </ul>
+             </div>
+        </section>
+
+         <!-- Section 3: Daily Checklist & Scripts -->
+        <section id="checklist-scripts">
+            <h2><i class="fas fa-tasks"></i> Daily Execution Toolkit</h2>
+
+            <div id="checklist">
+                <h3><i class="fas fa-clipboard-check"></i> Your Daily Success Checklist</h3>
+                <div class="card">
+                    <h4><i class="fas fa-sun"></i> Morning Routine (Mindset & Prep)</h4>
+                     <ul>
+                        <li><i class="fas fa-check"></i> Affirmations & Visualization (5 mins)</li>
+                        <li><i class="fas fa-check"></i> Personal Development (30 mins - Read/Listen)</li>
+                        <li><i class="fas fa-check"></i> Check Business/Team Updates (10 mins)</li>
+                     </ul>
+                </div>
+                 <div class="card">
+                    <h4><i class="fas fa-users"></i> Daily Prospecting & Follow-Ups</h4>
+                     <ul>
+                         <li><i class="fas fa-check"></i> Add 3-5 New Contacts to List</li>
+                         <li><i class="fas fa-check"></i> Send 5-10 Prospecting Messages</li>
+                         <li><i class="fas fa-check"></i> Book 2-3 Presentations (Calls/Zooms)</li>
+                         <li><i class="fas fa-check"></i> Follow Up with 5-10 People</li>
+                         <li><i class="fas fa-check"></i> Engage on Social Media (15 mins - Post/Comment)</li>
+                     </ul>
+                 </div>
+                 <div class="card">
+                    <h4><i class="fas fa-sitemap"></i> Team Building & Training</h4>
+                     <ul>
+                         <li><i class="fas fa-check"></i> Recognize & Encourage Team Members (Voice note/Message)</li>
+                         <li><i class="fas fa-check"></i> Attend/Host a Training Call</li>
+                     </ul>
+                 </div>
+                 <div class="card">
+                    <h4><i class="fas fa-moon"></i> Evening Reflection (Review & Plan)</h4>
+                     <ul>
+                         <li><i class="fas fa-check"></i> Track Your Numbers (Contacts, Presentations, Follow-ups, Sign-ups)</li>
+                         <li><i class="fas fa-check"></i> Plan Tomorrow’s Activities</li>
+                     </ul>
+                 </div>
+            </div>
+
+            <div id="scripts">
+                 <h3><i class="fas fa-scroll"></i> High-Converting Script Templates</h3>
+                 <p style="text-align: center; margin: -10px auto 30px auto; font-size: 1.1rem;">Copy, personalize, and deploy these proven scripts!</p>
+
+                 <div class="script-category">
+                    <h4><i class="fas fa-comment-dots"></i> 1. Prospecting Messages</h4>
+                    <div class="script-template">
+                        <p><strong><i class="fas fa-user-secret"></i> Cold Market Script:</strong> "Hey [Name]! I came across your profile and love what you're doing! Quick question—Are you open to new income opportunities? If not, no worries, just wanted to ask!"</p>
+                    </div>
+                     <div class="script-template">
+                         <p><strong><i class="fas fa-user-friends"></i> Warm Market Script:</strong> "Hey [Name], I’m working on a new project and thought of you. I know you’re always open to new ways to make money, and I’d love to show you what I’m working on. Are you free for a quick chat?"</p>
+                     </div>
+                      <div class="script-template">
+                         <p><strong><i class="fas fa-history"></i> Reconnecting Script:</strong> "Hey [Name]! It's been a while. How have you been? I’d love to catch up and share something exciting I’m working on. Let’s hop on a quick call—what’s your schedule like?"</p>
+                      </div>
+                 </div>
+
+                 <div class="script-category">
+                    <h4><i class="fas fa-reply"></i> 2. Follow-Up Messages (Post-Presentation)</h4>
+                    <div class="script-template">
+                        <p><strong><i class="fas fa-thumbs-up"></i> If Interested:</strong> "Hey [Name], I loved chatting with you! What did you like most about the opportunity? (Wait for answer) Sounds great! So, are you ready to get started today?"</p>
+                    </div>
+                    <div class="script-template">
+                        <p><strong><i class="fas fa-hourglass-start"></i> Need Time to Think:</strong> "Totally understand! Quick question—What’s the biggest thing holding you back? I want to make sure I answer any questions you have."</p>
+                    </div>
+                    <div class="script-template">
+                        <p><strong><i class="fas fa-dollar-sign"></i> "No Money" Objection:</strong> "I totally get that! But let’s be honest—will your situation change if you don’t start something new? That’s why I’m doing this—to create financial freedom. Let’s start small and build up!"</p>
+                    </div>
+                     <div class="script-template">
+                        <p><strong><i class="fas fa-clock"></i> "No Time" Objection:</strong> "That’s exactly why I wanted to show you this! This business was designed for busy people. If I could show you a way to make extra income in just 30 minutes a day, would you give it a shot?"</p>
+                     </div>
+                     <div class="script-template">
+                         <p><strong><i class="fas fa-ghost"></i> If Ghosted:</strong> "Hey [Name], I know life gets busy! Just wanted to follow up—are you still open to earning extra income on the side?"</p>
+                     </div>
+                     <div class="script-template">
+                         <p><strong><i class="fas fa-flag-checkered"></i> Final Follow-Up:</strong> "Hey [Name], I don’t want to keep bugging you, but I just wanted to check one last time. If it’s not the right time, no problem—I’ll be here when you’re ready! Just let me know either way."</p>
+                     </div>
+                 </div>
+
+                 <div class="script-category">
+                     <h4><i class="fas fa-user-plus"></i> 3. Onboarding New Team Members</h4>
+                     <div class="script-template">
+                        <p><strong><i class="fas fa-party-horn"></i> After Sign-Up:</strong> "Welcome to the team, [Name]! 🎉 I’m so excited for you! Our first step is getting you set up. Let’s book a quick call to go over everything and get you making money ASAP!"</p>
+                     </div>
+                     <div class="script-template">
+                         <p><strong><i class="fas fa-chalkboard-teacher"></i> First Training Call Prep:</strong> "Hey [Name], I just sent you our New Member Training Guide. Make sure to go through it before our call! Excited to help you start your journey!"</p>
+                     </div>
+                      <div class="script-template">
+                         <p><strong><i class="fas fa-running"></i> Encouraging Action:</strong> "Hey [Name], let’s get you earning ASAP! Your goal this week is to reach out to 10 people. Let’s do this together—send your first 3 messages and tell me how it goes!"</p>
+                      </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Automated Follow-Up Templates -->
+        <section id="automation">
+             <h2><i class="fas fa-robot"></i> Automated Follow-Up Power Sequences</h2>
+             <p style="text-align: center; max-width: 800px; margin: -25px auto 40px auto; font-size: 1.1rem;">Save time and stay top-of-mind with these automated sequences (Use CRM, Email, or Broadcasts).</p>
+
+            <div class="card">
+                <h4><i class="fas fa-paper-plane"></i> Follow-Up Sequence (After Initial Contact)</h4>
+                <div class="follow-up-sequence">
+                    <div class="follow-up-day"><strong>📅 Day 1 – Thank You & Recap:</strong> "Hey [Name], great connecting! What did you like most about the opportunity? Let me know your questions!"</div>
+                    <div class="follow-up-day"><strong>📅 Day 3 – Address Objections:</strong> "Hey [Name], thinking about the right fit? If it's time, money, etc., let's talk. Want to help you decide!"</div>
+                    <div class="follow-up-day"><strong>📅 Day 7 – Scarcity Message:</strong> "Hey [Name], closing spots for my mentorship group this week! 🚀 If you're serious about extra income, let's lock yours in!"</div>
+                    <div class="follow-up-day"><strong>📅 Day 14 – Social Proof:</strong> "Hey [Name], exciting updates! Just helped [New Recruit] get results! Thought of you - ready to chat again?"</div>
+                    <div class="follow-up-day"><strong>📅 Day 21 – Final Check-In:</strong> "Hey [Name], no pressure, just checking in one last time. If timing isn't right, no worries! Let me know."</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4><i class="fas fa-user-check"></i> Follow-Up Sequence (For New Sign-Ups)</h4>
+                 <div class="follow-up-sequence">
+                     <div class="follow-up-day"><strong>📅 Day 1 – Welcome:</strong> "Welcome, [Name]! 🎉 Excited for you! First step: watch this training video & set up. Let me know when done!"</div>
+                     <div class="follow-up-day"><strong>📅 Day 3 – First Task:</strong> "Hey [Name], time for action! Task: Message 10 people today using this script: 'Hey [Name], just started something new, thought of you! Open to checking it out?' Let me know how it goes!"</div>
+                     <div class="follow-up-day"><strong>📅 Day 7 – Training Call Reminder:</strong> "Hey [Name], first training call tonight! 📞 Don't miss it - best way to learn fast. Can I count you in?"</div>
+                 </div>
+            </div>
+        </section>
+
+         <!-- Section 5: Social Media Strategy -->
+        <section id="social-media">
+             <h2><i class="fas fa-share-alt"></i> Social Media Attraction Blueprint</h2>
+             <p style="text-align: center; max-width: 800px; margin: -25px auto 40px auto; font-size: 1.1rem;">Use magnetic content marketing to draw prospects TO YOU. Post 3-5x per week.</p>
+
+             <div class="card">
+                <h4><i class="fas fa-lightbulb"></i> Content Pillars & Ideas</h4>
+                 <ul>
+                    <li><i class="fas fa-star"></i> <strong>Personal Story:</strong> Share your 'Why' and transformation. <strong>(Authenticity!)</strong></li>
+                    <li><i class="fas fa-trophy"></i> <strong>Success Stories & Testimonials:</strong> Team wins, milestones. <strong>(Proof!)</strong></li>
+                    <li><i class="fas fa-camera"></i> <strong>Behind-the-Scenes:</strong> Show your 'day in the life'. <strong>(Relatability!)</strong></li>
+                    <li><i class="fas fa-graduation-cap"></i> <strong>Value & Education:</strong> Teach about MLM, sales, mindset. <strong>(Authority!)</strong></li>
+                    <li><i class="fas fa-umbrella-beach"></i> <strong>Lifestyle & Freedom:</strong> Showcase the benefits (flexibility, travel). <strong>(Aspiration!)</strong></li>
+                    <li><i class="fas fa-bullhorn"></i> <strong>Call-to-Action:</strong> Directly invite people to join/learn more. <strong>(Clarity!)</strong></li>
+                 </ul>
+             </div>
+
+              <div class="card">
+                 <h4><i class="fas fa-magnet"></i> Engagement Strategy for Passive Leads</h4>
+                 <ul>
+                     <li><i class="fas fa-comments"></i> Comment meaningfully on 10-20 relevant posts daily.</li>
+                     <li><i class="fas fa-paper-plane"></i> DM 5-10 new people daily (connect genuinely, don't pitch immediately).</li>
+                     <li><i class="fas fa-poll"></i> Use interactive polls & question stickers in Stories daily.</li>
+                     <li><i class="fas fa-video"></i> Go Live 1-2x per week (Q&A, tips, testimonials).</li>
+                 </ul>
+              </div>
+
+             <!-- 30-Day Content Calendar -->
+            <div id="calendar">
+                 <h3><i class="fas fa-calendar-alt"></i> Your 30-Day Content Calendar</h3>
+
+                 <div class="calendar-week">
+                     <h4>📅 WEEK 1: BUILD AWARENESS & TRUST</h4>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 1:</div> <div class="calendar-day-content"><strong>Your Raw Story</strong> - Share the *real* reason you started MLM. Vulnerability connects!</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 2:</div> <div class="calendar-day-content"><strong>Myth Busting Reel/TikTok</strong> - Address MLM misconceptions with facts & energy.</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 3:</div> <div class="calendar-day-content"><strong>Engagement Poll (Story)</strong> - "Side hustle dream: More Time or More Money?"</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 4:</div> <div class="calendar-day-content"><strong>Behind-the-Scenes Photo</strong> - Your workspace (even if messy!) caption about flexibility.</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 5:</div> <div class="calendar-day-content"><strong>Team Shoutout</strong> - Celebrate a team member's small win (first call, first sale).</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 6:</div> <div class="calendar-day-content"><strong>Soft Call-to-Action</strong> - "Curious how I added income without quitting my job? DM 'Curious'."</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 7:</div> <div class="calendar-day-content"><strong>Live Q&A</strong> - "Ask Me Anything About Starting a Side Hustle."</div></div>
+                 </div>
+
+                 <div class="calendar-week">
+                     <h4>📅 WEEK 2: PROVIDE VALUE & SHOW PROOF</h4>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 8:</div> <div class="calendar-day-content"><strong>Value Carousel</strong> - "3 Simple Steps to Earn Your First $100 Online."</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 9:</div> <div class="calendar-day-content"><strong>Social Proof Graphic</strong> - Share team growth % or a positive customer review.</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 10:</div> <div class="calendar-day-content"><strong>FAQ Reel</strong> - Answer "Is it hard to get started?" honestly.</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 11:</div> <div class="calendar-day-content"><strong>Mindset Tip Post</strong> - "How I Overcome Fear of Rejection (My #1 Tip)."</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 12:</div> <div class="calendar-day-content"><strong>Engagement Question (Post)</strong> - "What's ONE thing holding you back from more income?"</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 13:</div> <div class="calendar-day-content"><strong>Before & After Story (Focus)</strong> - Compare your schedule/stress levels before vs. now.</div></div>
+                     <div class="calendar-day"><div class="calendar-day-num">Day 14:</div> <div class="calendar-day-content"><strong>Direct Call-to-Action</strong> - "Ready to build income online? I'm mentoring 3 people! Drop 🔥!"</div></div>
+                 </div>
+
+                <div class="calendar-week">
+                     <h4>📅 WEEK 3: DEEPEN CONNECTION & HANDLE OBJECTIONS</h4>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 15:</div> <div class="calendar-day-content"><strong>Day-in-the-Life Reel (Humor)</strong> - Show juggling work/life with MLM.</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 16:</div> <div class="calendar-day-content"><strong>Mistakes Carousel</strong> - "Avoid These 3 Time-Wasting Habits in Your Side Hustle."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 17:</div> <div class="calendar-day-content"><strong>Behind-the-Scenes Video Clip</strong> - Short clip from a positive team Zoom/event.</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 18:</div> <div class="calendar-day-content"><strong>Client/Customer Testimonial</strong> - Share how the product/service helped someone.</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 19:</div> <div class="calendar-day-content"><strong>Interactive Story (Quiz)</strong> - "What's Your Side Hustle Personality?" (Lead to DM).</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 20:</div> <div class="calendar-day-content"><strong>Objection Handling Post</strong> - "Think you need sales experience? Think again..."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 21:</div> <div class="calendar-day-content"><strong>Live Video</strong> - Tackle the "I don't have money" objection head-on.</div></div>
+                </div>
+
+                <div class="calendar-week">
+                     <h4>📅 WEEK 4: POSITION LEADERSHIP & DRIVE CONVERSION</h4>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 22:</div> <div class="calendar-day-content"><strong>Leadership Tip Carousel</strong> - "How I Helped My First Teammate Succeed."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 23:</div> <div class="calendar-day-content"><strong>Vision Post</strong> - "What Passive Income *Really* Means (Hint: Freedom)."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 24:</div> <div class="calendar-day-content"><strong>Lifestyle Reel</strong> - Show a brief moment of freedom MLM allows (mid-day coffee, kid's event).</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 25:</div> <div class="calendar-day-content"><strong>Your Results Update</strong> - Share a specific milestone achieved (personal or team).</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 26:</div> <div class="calendar-day-content"><strong>Relatable Struggle Post</strong> - "Feeling overwhelmed? Me too sometimes. Here's how I refocus..."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 27:</div> <div class="calendar-day-content"><strong>Success Habits Post</strong> - "My Top 3 Non-Negotiable Daily Actions for Growth."</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 28:</div> <div class="calendar-day-content"><strong>Engagement Question (Forward-Looking)</strong> - "What's ONE goal you want to hit by year-end?"</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 29:</div> <div class="calendar-day-content"><strong>Urgent Call-to-Action</strong> - "🚨 Final spots for mentorship closing TONIGHT! DM 'READY' NOW!"</div></div>
+                      <div class="calendar-day"><div class="calendar-day-num">Day 30:</div> <div class="calendar-day-content"><strong>Live Celebration & Future Pace</strong> - Celebrate wins, thank audience, hint at next steps.</div></div>
+                </div>
+            </div>
+
+            <!-- 30 Caption Templates -->
+             <div id="captions">
+                 <h3><i class="fas fa-pen-fancy"></i> Done-For-You Caption Templates</h3>
+                 <p style="text-align: center; margin: -10px auto 30px auto; font-size: 1.1rem;">Copy, personalize with YOUR voice, and paste!</p>
+                <!-- Week 1 Captions -->
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 1:</strong> "Let's be real: I started network marketing because I was [Your honest struggle: sick of debt, missing kids, etc.]. It wasn't easy, but finding a way to [Your transformation: gain control, build something mine] changed everything. If you feel stuck, maybe my story resonates? Let me know below. 👇 #RealTalk #NetworkMarketingJourney"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 2:</strong> "MYTH: It's a pyramid scheme! ❌ FACT: Pyramid schemes are illegal (no real product/service). Network Marketing is a legit $180B+ industry with real products & commissions based on SALES. Don't let myths block opportunity! Want the real scoop? Comment 'FACTS'! #MLMTruth #BusinessMyths"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 3 (Story Poll):</strong> "Quick poll! If you started a side hustle, your #1 goal would be: 💰 More Money / ⏳ More Time?"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 4:</strong> "My 'office' today! ☕️💻 Proof that you don't need fancy to build freedom. Just consistency & wifi! 😉 What's your dream workspace? #WorkFromAnywhere #LaptopLifestyle #Mompreneur"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 5:</strong> "HUGE shoutout to [Team Member Name] for [Specific small win: making their first prospecting call / getting their first customer]! 🎉 So proud of you taking action! This is how it starts! Who's next?! #TeamWins #CelebrateSuccess #ProudLeader"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 6:</strong> "Ever wonder how busy people add extra income without quitting their day job? 🤔 I figured out a simple way. If you're curious (no pressure!), just DM me 'Curious'. Happy to share! #SideHustleTips #ExtraIncome"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 7 (Live Promo):</strong> "Going LIVE tonight at [Time]! Topic: Ask Me Anything About Starting a Side Hustle (The real, unfiltered version!). Drop your Qs below so I can cover them! 👇 See you there! 🎥 #LiveQA #SideHustleLife"</p></div>
+                 <!-- Week 2 Captions -->
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 8:</strong> "Want to earn your first $100 online? 💸 Here's the simple path: 1️⃣ Find ONE product you love. 2️⃣ Share WHY you love it (authentically!). 3️⃣ Invite people to look (no pressure!). That's it! Need the exact steps? DM '100'. #OnlineIncome #SimpleSteps #MakeMoneyOnline"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 9:</strong> "Proof it works! ✨ [Share a quick stat: Our team volume grew X% this month / Check out this amazing customer review!]. Results happen when you follow the system & stay consistent. This could be YOU. #SocialProof #Results #NetworkMarketingWorks"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 10:</strong> "FAQ Time! 'Is it hard to get started?' Honest answer: Learning ANYTHING new takes effort. But is it complicated? NO! We have simple steps & support. If you can follow instructions & talk to people, you can do this. 😉 #MLMFaq #BeginnerFriendly"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 11:</strong> "My #1 tip for overcoming fear of rejection? 👉 Detach from the outcome! Your job is to share, their job is to decide. That's it. Focus on activity, not results, and the fear shrinks. What's your best mindset tip? #MindsetShift #SalesTips #OvercomeFear"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 12:</strong> "Let's talk barriers. What's the ONE biggest thing you feel is holding you back from creating more income right now? (Fear? Time? Know-how? Belief?) Share below - let's tackle it! 👇 #MoneyMindset #GoalGetter"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 13:</strong> "Before this biz: Stressed, constantly checking work emails, missing moments. 😩 Now: More present, flexible schedule, less financial worry. 🙏 It wasn't overnight, but the *freedom* is worth the work. What does freedom look like for YOU? #TransformationTuesday #LifeByDesign"</p></div>
+                 <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 14:</strong> "Okay, serious question: Who's READY to actually start building extra income online? I'm taking on 3 new mentees this week to show them step-by-step. If that's YOU, drop a 🔥 below! #Mentorship #JoinMyTeam #LetsGo"</p></div>
+                <!-- Week 3 Captions -->
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 15 (Reel Idea):</strong> "Reality of working from home with [kids/pets/distractions] 😂 But hey, wouldn't trade this flexibility! #WFHLife #MomBoss #RealLife #NetworkMarketingPerks"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 16:</strong> "Stop wasting time in your side hustle! ⏳ Avoid these 3 things: 1️⃣ Trying to reinvent the wheel (follow the system!). 2️⃣ Spending hours on graphics (done is better than perfect!). 3️⃣ Getting stuck in 'learning mode' (take ACTION!). Which one hits home? #ProductivityTips #SideHustleHacks"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 17:</strong> "So much energy on our team call tonight! 🔥 Love connecting with these amazing people all working towards their goals. Community is EVERYTHING in this business. #Teamwork #CommunityOverCompetition #MLMCommunity"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 18:</strong> "Got this message from a happy customer today! '[Quote snippet from customer testimonial about product benefit]'. THIS is why I love what I do - helping people feel/look/live better! ❤️ #CustomerLove #Testimonial #ProductThatWorks"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 19 (Story Quiz Idea):</strong> "What's Your Side Hustle Style? 🤔 A) The Social Butterfly 🦋 B) The Problem Solver 💡 C) The Systems Guru ⚙️ (Create polls leading to a DM convo based on answer)"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 20:</strong> "Think you need to be a 'salesperson' to succeed here? 🙅‍♀️ FALSE! It's about sharing solutions & connecting authentically. If you care about people & can share something you love, you have what it takes. Period. #SalesMyths #AuthenticMarketing"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 21 (Live Promo):</strong> "Going LIVE tonight at [Time]! Let's tackle the BIG one: 'I don't have the money to start.' 💰 I'll share exactly how I handled that & why it might be the *reason* to start. Bring your questions! #MoneyTalks #InvestmentMindset #LiveQA"</p></div>
+                <!-- Week 4 Captions -->
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 22:</strong> "How I helped my first teammate get started? Simple: 1️⃣ Focused on ONE next step. 2️⃣ Cheered them on LOUDLY. 3️⃣ Connected them to team resources. Leadership isn't complicated - it's about support & belief. Who needs that right now? #LeadershipTips #TeamBuilder"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 23:</strong> "Passive income isn't just about money hitting your bank while you sleep. It's about OPTIONS. The option to say no, the option to travel, the option to be present. THAT'S the freedom I'm building. Who wants that too? ✨ #PassiveIncome #FinancialFreedom #LifeGoals"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 24 (Reel Idea):</strong> "Quick break between calls to [enjoy coffee outside / walk the dog / pick up kids]. This flexibility? Priceless. 🙏 #FreedomLifestyle #NetworkMarketingBenefits #SimpleJoys"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 25:</strong> "RESULTS UPDATE! 🎉 So thrilled that [Share a specific achievement: e.g., my team hit $X in volume / I helped X new customers this month / I ranked up!]. Slow, steady, CONSISTENT action pays off! Grateful for this journey. #Milestone #BusinessGrowth #HardWorkPaysOff"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 26:</strong> "Real talk: Some days feel overwhelming. Juggling it all IS hard. When that happens, I [Your coping strategy: take a walk, revisit my 'Why', connect with my mentor]. Remember, progress over perfection. You got this. 💪 #RealLifeEntrepreneur #KeepGoing #MindsetMatters"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 27:</strong> "My Top 3 Non-Negotiable Daily Actions for Growth: 1️⃣ Connect with 3 new people. 2️⃣ Follow up with 5 potentials. 3️⃣ 15 mins Personal Development. Simple, not always easy, but EFFECTIVE. What are your non-negotiables? #DailyHabits #SuccessRoutine"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 28:</strong> "Looking ahead! 🔮 What's ONE big goal (business or personal) you're determined to achieve by the end of this year? Declare it below! Let's hold each other accountable! 👇 #GoalSetting #Accountability #DreamBig"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 29:</strong> "🚨 LAST CALL! 🚨 Spots for my 1:1 mentorship are officially closing TONIGHT! If you want the roadmap & support to build your online income stream, DM me 'READY' right NOW before it's too late! Let's do this! 🚀 #LastChance #MentorshipOpportunity #TakeAction"</p></div>
+                <div class="script-template"><p><strong><i class="fas fa-calendar-day"></i> Day 30 (Live Promo):</strong> "Going LIVE at [Time] to celebrate this month's wins, shout out some amazing people, and share what's next! 🎉 Bring your questions & let's wrap up the month strong! #LiveCelebration #CommunityLove #WhatsNext"</p></div>
+             </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="final-cta">
+             <h3>Your Future is Built Daily. Start Now.</h3>
+             <p>You have the strategy. You have the tools. You have the inspiration. The only variable left is YOUR consistent action. Choose growth. Choose freedom. Choose to start TODAY.</p>
+             <a href="#" class="cta-button"><i class="fas fa-play-circle"></i> IGNITE YOUR SUCCESS PLAN!</a>
+        </section>
+
+    </main>
+
+</body>
+</html>
