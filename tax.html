@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating FIRS TaxPro Max: A Guide for Dammie Optimus Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0A2B4C; /* Deep Blue */
+            --secondary-color: #1A73E8; /* Brighter Blue for accents/links */
+            --accent-color: #27ae60; /* Green for success/positive actions */
+            --text-color: #333;
+            --light-text-color: #f8f9fa;
+            --background-color: #f4f7f6;
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --danger-color: #dc3545;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        main {
+            padding: 30px 0;
+        }
+
+        section {
+            background-color: var(--card-background);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+        }
+        
+        h4 {
+            font-size: 1.4em;
+            color: #555; /* Slightly lighter than primary text for sub-sub-headings */
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong, b {
+            font-weight: 700;
+        }
+        
+        em, i {
+            font-style: italic;
+        }
+
+        .callout {
+            background-color: #e9f5ff;
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .callout.warning {
+            background-color: #fff3cd;
+            border-left-color: var(--warning-color);
+        }
+        .callout.danger {
+            background-color: #f8d7da;
+            border-left-color: var(--danger-color);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            font-weight: 600;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .action-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .action-list li {
+            background-color: #f8f9fa;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .action-list li i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 1.5em;
+            margin-top: 3px;
+        }
+
+        .action-list h4 {
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+        
+        .action-list p {
+            margin-bottom: 0;
+            font-size: 0.95em;
+        }
+
+        .key-tax-item {
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fdfdff;
+        }
+
+        .key-tax-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .key-tax-item ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        .key-tax-item ul li {
+            margin-bottom: 5px;
+        }
+
+        sup {
+            font-size: 0.7em;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            background-color: #343a40;
+            color: var(--light-text-color);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            section {
+                padding: 20px;
+            }
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Navigating FIRS TaxPro Max</h1>
+            <p>A Comprehensive Guide for Dammie Optimus Solutions to Overcome Tax Backlog and Ensure Compliance</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="executive-summary">
+                <h2>1. Executive Summary: Your Path to Nigerian Tax Compliance</h2>
+                <p>Dammie Optimus Solutions, a company registered in June 2024 with a Tax Identification Number (TIN), faces a significant challenge: an accumulated backlog of federal tax filings and payments through the Federal Inland Revenue Service (FIRS) TaxPro Max portal. This situation, while common for newly established businesses, requires immediate and structured attention to avoid escalating penalties.</p>
+                <p>This report serves as a comprehensive guide designed to empower Dammie Optimus Solutions to understand its tax obligations, navigate the TaxPro Max portal effectively, clear all outstanding filings, and mitigate potential penalties. <strong>The immediate call to action is to bring the company into full compliance with FIRS regulations by systematically addressing all overdue submissions and payments.</strong></p>
+                <div class="callout">
+                    <p>The FIRS TaxPro Max portal, despite its initial learning curve, offers robust tools to streamline tax administration. By following the detailed guidance within this report, Dammie Optimus Solutions can transform a potentially overwhelming task into a manageable process, ensuring long-term compliance and safeguarding its financial health.</p>
+                </div>
+            </section>
+
+            <section id="understanding-taxpro-max">
+                <h2>2. Understanding FIRS TaxPro Max: Your Essential Digital Tax Office</h2>
+                <p>The FIRS TaxPro Max platform represents a pivotal shift in Nigeria's tax administration landscape, serving as the official online gateway for managing federal tax affairs. It functions as a comprehensive digital tax office, designed to simplify interactions between taxpayers and the FIRS.<sup>1</sup> This strategic move by FIRS aims to centralize tax processes, reducing the reliance on traditional paper-based methods and extensive physical queues. The platform's 24/7 accessibility offers considerable flexibility for businesses to manage their tax obligations at their convenience, although occasional challenges related to internet speed or site performance may arise.<sup>1</sup></p>
+                
+                <h3>Core Functionalities of TaxPro Max:</h3>
+                <p>The platform is equipped with a suite of functionalities tailored to meet various taxpayer needs:</p>
+                <ul>
+                    <li><strong>Taxpayer Registration:</strong> It allows for the registration of companies and individuals using their Tax Identification Number (TIN) and other relevant business details.<sup>1</sup></li>
+                    <li><strong>Filing Returns:</strong> TaxPro Max facilitates the online submission of diverse federal tax returns, including Company Income Tax (CIT), Value-Added Tax (VAT), Withholding Tax (WHT), Tertiary Education Tax (TET), and National Information Technology Development Levy (NITDL).<sup>1</sup></li>
+                    <li><strong>Making Payments:</strong> Taxpayers can make direct tax payments through integrated methods such as Nigerian banks, the Remita payment gateway, and debit/credit cards.<sup>1</sup></li>
+                    <li><strong>Downloading Certificates:</strong> The portal enables the download of official payment receipts and Tax Clearance Certificates (TCCs), which are crucial for various business dealings.<sup>1</sup></li>
+                    <li><strong>Account History:</strong> Users can review their complete account history, including previous filings and payments, providing a transparent overview of their tax compliance status.<sup>1</sup></li>
+                    <li><strong>TCC Validation:</strong> A built-in feature allows for the verification of a TCC's authenticity.<sup>1</sup></li>
+                </ul>
+                <p>The comprehensive nature of TaxPro Max means that once a company becomes proficient with the platform, nearly all its federal tax compliance activities can be managed from a single online interface. This centralization is a significant long-term benefit for operational efficiency, as it eliminates the need for separate processes or physical interactions for different tax types.</p>
+
+                <h3>Step-by-Step Initial Login/Registration on TaxPro Max:</h3>
+                <p>Since Dammie Optimus Solutions has already obtained a Tax Identification Number (TIN), the primary step is to gain access to the TaxPro Max portal using this existing TIN. The TIN is the foundational digital identity that unlocks all tax-related services on TaxPro Max, making its proper linkage to the online profile essential for any tax activity.<sup>4</sup></p>
+                <ol>
+                    <li><strong>Access the Portal:</strong> Navigate to the official FIRS TaxPro Max portal by entering <a href="https://taxpromax.firs.gov.ng/" target="_blank">https://taxpromax.firs.gov.ng/</a> into a web browser.<sup>1</sup></li>
+                    <li><strong>Login or Register:</strong>
+                        <ul>
+                            <li>If login details (email and password) were provided by FIRS upon TIN issuance or company registration, click "Login" and enter these credentials.<sup>5</sup> It is advisable to check email inboxes, including spam folders, for these initial credentials.<sup>1</sup></li>
+                            <li>If no pre-assigned login details are available, it may be necessary to complete a "Register" or "Sign Up" process on the portal using the existing TIN. This typically involves entering the TIN and other required business details, followed by an email verification step where a link must be clicked to verify the account and set a password.<sup>1</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Forgot Password Option:</strong> Should login details be forgotten, the "Forgot Your Password" link can be utilized. This process involves entering the registered email address to receive a password reset link, allowing for the creation of a new password.<sup>5</sup></li>
+                    <li><strong>Complete Profile:</strong> After successfully logging in, ensure that all business and personal details are fully completed as prompted by the system.<sup>1</sup></li>
+                </ol>
+
+                <h3>Navigating the Dashboard to Identify "Taxes Due":</h3>
+                <p>Upon successful login, the system will direct the user to the homepage or dashboard, which serves as the central hub for various tax activities.<sup>3</sup> To address the accumulated backlog, the most critical section to access is "Taxes Due."</p>
+                <ul>
+                    <li>From the dashboard, locate and click on "Taxes Due".<sup>3</sup></li>
+                    <li>The system is designed to automatically prompt taxpayers on taxes that are due under this section.<sup>5</sup> This feature is invaluable for a new business owner, as it directly identifies outstanding obligations, simplifying the process of understanding the backlog.</li>
+                    <li>Under the "Action" column for each listed tax type, options such as "Process" to commence filing or "Remove" for returns that have been manually filed elsewhere are available, preventing the accumulation of redundant penalties.<sup>5</sup> This system-driven compliance prompt significantly aids in managing the backlog.</li>
+                </ul>
+                <div class="callout warning">
+                    <p>The portal's design for self-service, while empowering, requires accurate data input and meticulous document preparation. The system's auto-calculation features rely entirely on the correctness of the user's initial figures. Therefore, careful attention to detail during data entry and ensuring all supporting documents are properly prepared and attached is paramount.</p>
+                </div>
+                
+                <h4>Table 2: FIRS TaxPro Max Essential Navigation Steps</h4>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Description</th>
+                                <th>Relevant Menu/Button/URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Access Portal</td>
+                                <td>Open the official FIRS TaxPro Max website.</td>
+                                <td><a href="https://taxpromax.firs.gov.ng/" target="_blank">https://taxpromax.firs.gov.ng/</a></td>
+                            </tr>
+                            <tr>
+                                <td>Login/Register</td>
+                                <td>Gain access to your account using your TIN, email, and password.</td>
+                                <td>"Login" or "Register"/"Sign Up"</td>
+                            </tr>
+                            <tr>
+                                <td>Forgot Password</td>
+                                <td>Reset your password if you cannot remember your login details.</td>
+                                <td>"Forgot Your Password"</td>
+                            </tr>
+                            <tr>
+                                <td>Navigate to Dashboard</td>
+                                <td>The main page after successful login, displaying various tasks.</td>
+                                <td>Automatic after login</td>
+                            </tr>
+                            <tr>
+                                <td>Identify Due Taxes</td>
+                                <td>View a list of all outstanding tax obligations.</td>
+                                <td>"Taxes Due" on the dashboard</td>
+                            </tr>
+                            <tr>
+                                <td>Initiate Filing</td>
+                                <td>Begin the process of completing and submitting a tax return for a specific tax type.</td>
+                                <td>"Process" under the "Action" column for a specific tax</td>
+                            </tr>
+                            <tr>
+                                <td>Make Payment</td>
+                                <td>Process tax payments after filing.</td>
+                                <td>"Make Payment" or "Pay"</td>
+                            </tr>
+                            <tr>
+                                <td>Download TCC/Receipts</td>
+                                <td>Obtain official proof of tax compliance or payment.</td>
+                                <td>"Tax Clearance Certificate (TCC)" / Receipts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="identifying-obligations">
+                <h2>3. Identifying Your Company's Federal Tax Obligations in Nigeria</h2>
+                <p>As a newly registered company in Nigeria (June 2024), Dammie Optimus Solutions is subject to several federal tax obligations administered by the FIRS. It is important to note that tax liabilities are not typically fixed "daily" or "monthly" amounts, but rather depend on the company's financial activities (income, expenses, transactions) and the specific tax type's filing frequency. While the query focuses on FIRS, it is also important to acknowledge that other tax authorities (State Inland Revenue Services, Local Government Revenue Committees) exist for other tax types, ensuring a complete understanding of the tax landscape.<sup>4</sup></p>
+                <div class="callout danger">
+                    <p><strong>Significant Backlog Accumulation:</strong> Having registered in June 2024, Dammie Optimus Solutions has potentially missed multiple monthly VAT and Withholding Tax (WHT) filings since July 2024. Depending on its chosen financial year-end, its first annual Company Income Tax (CIT), Tertiary Education Tax (TET), and National Information Technology Development Levy (NITDL) filings may also be overdue. If the company has employees, additional monthly/quarterly obligations such as Pay-As-You-Earn (PAYE), National Housing Fund (NHF), Industrial Training Fund (ITF), and Pension contributions would also have accrued. This highlights that the "backlog" is not a single missed filing, but a series of accumulating monthly and annual obligations, each adding to the total liability and potential penalties.</p>
+                </div>
+
+                <h3>Key Federal Taxes for Nigerian Companies:</h3>
+                <div class="key-tax-item">
+                    <h4>Company Income Tax (CIT)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Tax on profits of registered companies.<sup>9</sup></li>
+                        <li><strong>Rates:</strong><sup>9</sup>
+                            <ul>
+                                <li>Turnover &lt; ₦25M: Tax exempt.</li>
+                                <li>Turnover ₦25M - ₦100M: 20%.</li>
+                                <li>Turnover &gt; ₦100M: 30%.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Filing & Due Date:</strong> Annual, within 6 months of financial year-end.<sup>9</sup> (First CIT for June 2024 registration with Dec 31st year-end: due June 30th, 2025). <strong>Note:</strong> Filing is required even if exempt.<sup>11</sup></li>
+                        <li><strong>Applicability:</strong> All incorporated companies.<sup>10</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Value Added Tax (VAT)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Consumption tax on most goods and services.<sup>9</sup></li>
+                        <li><strong>Rate:</strong> 7.5%.<sup>9</sup></li>
+                        <li><strong>Exemptions:</strong> Basic food items, medical products, educational materials, agricultural products. Non-oil exports are zero-rated.<sup>9</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Monthly, by 21st of following month.<sup>10</sup> (Accruing since July 2024 for Dammie Optimus).</li>
+                        <li><strong>Applicability:</strong> VAT-registered businesses with taxable supplies.<sup>10</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Withholding Tax (WHT)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Advance tax deducted at source for rents, dividends, interest, commissions, professional fees.<sup>16</sup> Payer remits to FIRS.<sup>17</sup></li>
+                        <li><strong>Rates:</strong> Vary (e.g., 10% for dividends, interest, rent; 5% for resident corporate consultancy, 10% for non-resident).<sup>16</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Monthly, by 21st of month following payment/deduction.<sup>16</sup></li>
+                        <li><strong>Applicability:</strong> If Dammie Optimus makes payments for WHT-subject services.</li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Tertiary Education Tax (TET)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Tax for TETFUND.<sup>21</sup></li>
+                        <li><strong>Rate:</strong> 3% of assessable profit (effective for accounting periods ending on/after Sep 1, 2023).<sup>22</sup> Dammie Optimus will use 3%.</li>
+                        <li><strong>Filing & Due Date:</strong> Aligned with CIT.<sup>10</sup></li>
+                        <li><strong>Applicability:</strong> All incorporated companies.<sup>21</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>National Information Technology Development Levy (NITDL)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Levy for IT development.<sup>10</sup></li>
+                        <li><strong>Rate:</strong> 1% of Profit Before Tax (PBT).<sup>25</sup></li>
+                        <li><strong>Applicability:</strong> Companies with annual turnover ≥ ₦100M in specified sectors (GSM, telecom, cyber, internet providers, pension managers, banks, financial institutions, insurance).<sup>25</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Same as CIT and TET.<sup>10</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Stamp Duties</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Tax on written/electronic instruments for legal enforceability.<sup>27</sup></li>
+                        <li><strong>Categories:</strong> Ad Valorem (value-based) and Flat Rate.<sup>27</sup></li>
+                        <li><strong>Rates:</strong> Vary (e.g., 1% for contract agreements).<sup>28</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Generally within 30-40 days of instrument execution.<sup>27</sup></li>
+                        <li><strong>Applicability:</strong> FIRS administers for corporate bodies. Payment via TaxPro Max e-Stamping.<sup>27</sup> Transactional tax.</li>
+                    </ul>
+                </div>
+
+                <h3>Other Statutory Contributions (Federal Level, but often remitted to other agencies):</h3>
+                <p>While the primary focus of this report is on FIRS-administered taxes, it is crucial for Dammie Optimus Solutions to be aware of other statutory obligations, especially if the company has employees.</p>
+                <div class="key-tax-item">
+                    <h4>Personal Income Tax (PIT) / Pay-As-You-Earn (PAYE)</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Tax on owner's profits (PIT); employers deduct PAYE from salaries and remit to State Internal Revenue Service (SIRS).<sup>9</sup></li>
+                        <li><strong>Rates (PIT):</strong> 7% to 24% based on income brackets.<sup>9</sup></li>
+                        <li><strong>Filing & Due Date (PAYE):</strong> Remittance by 10th of following month.<sup>9</sup> Annual employer returns by Jan 31st.<sup>20</sup></li>
+                        <li><strong>Applicability:</strong> If Dammie Optimus employs staff.</li>
+                    </ul>
+                </div>
+                 <div class="key-tax-item">
+                    <h4>National Housing Fund (NHF) Levy</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Mandatory contribution for affordable housing.<sup>32</sup></li>
+                        <li><strong>Rate:</strong> 2.5% of employee's monthly basic salary.<sup>19</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Remit to FMBN within one month of deduction.<sup>19</sup></li>
+                        <li><strong>Applicability:</strong> Nigerian employees earning ≥ ₦3,000 p.a.<sup>33</sup> Employee contribution now optional; if elected, employer must deduct/remit.<sup>34</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Industrial Training Fund (ITF) Levy</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Contribution for skills acquisition.<sup>35</sup></li>
+                        <li><strong>Rate:</strong> 1% of total annual payroll.<sup>20</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Annually, by April 1st<sup>20</sup> or Q1.<sup>37</sup></li>
+                        <li><strong>Applicability:</strong> Employers with ≥5 employees, or annual turnover ≥ ₦50M.<sup>20</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Pension Contributions</h4>
+                    <ul>
+                        <li><strong>Description:</strong> Mandatory contributions to Pension Fund Administrators (PFAs).<sup>19</sup></li>
+                        <li><strong>Rates:</strong> Employer min. 10%, Employee min. 8% (total 18%) of monthly emoluments. Employer may bear full 20%.<sup>19</sup></li>
+                        <li><strong>Filing & Due Date:</strong> Remit to PFA within 7 working days after payday.<sup>19</sup></li>
+                        <li><strong>Applicability:</strong> Employers with >3 employees.<sup>39</sup></li>
+                    </ul>
+                </div>
+
+                <h4>Table 1: Summary of Key Federal Taxes for Nigerian Companies</h4>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tax Type</th>
+                                <th>Applicable Rate</th>
+                                <th>Filing Frequency</th>
+                                <th>General Due Date</th>
+                                <th>Primary Penalty for Late Filing/Non-Remittance</th>
+                                <th>Administered By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Company Income Tax (CIT)</td>
+                                <td>0% (turnover &lt;₦25M), 20% (₦25M-₦100M), 30% (&gt;₦100M)</td>
+                                <td>Annual</td>
+                                <td>Within 6 months of financial year-end or 18 months of incorporation (whichever is earlier for first return)</td>
+                                <td>₦25,000 (1st month), ₦5,000 (subsequent months) for late filing; 10% + interest for late payment</td>
+                                <td>FIRS</td>
+                            </tr>
+                            <tr>
+                                <td>Value Added Tax (VAT)</td>
+                                <td>7.5%</td>
+                                <td>Monthly</td>
+                                <td>21st day of the following month</td>
+                                <td>₦5,000 (per month) or ₦50,000 (1st month) + ₦25,000 (subsequent months) for late filing; 7.5% + interest for late remittance</td>
+                                <td>FIRS</td>
+                            </tr>
+                            <tr>
+                                <td>Withholding Tax (WHT)</td>
+                                <td>Varies (e.g., 10% for dividends, interest, rent; 2-10% for services)</td>
+                                <td>Monthly</td>
+                                <td>21st day of the following month of payment/deduction</td>
+                                <td>10% of amount not deducted/remitted + interest</td>
+                                <td>FIRS</td>
+                            </tr>
+                            <tr>
+                                <td>Tertiary Education Tax (TET)</td>
+                                <td>3% of assessable profit</td>
+                                <td>Annual</td>
+                                <td>Same as CIT due date</td>
+                                <td>₦1,000,000 (1st offence), ₦2,000,000 (subsequent) fine or imprisonment</td>
+                                <td>FIRS</td>
+                            </tr>
+                            <tr>
+                                <td>National Information Technology Development Levy (NITDL)</td>
+                                <td>1% of Profit Before Tax (for specified companies with turnover ≥₦100M)</td>
+                                <td>Annual</td>
+                                <td>Same as CIT due date</td>
+                                <td>Unpaid levy + 10% + interest (after demand note); Fines/imprisonment for general offences</td>
+                                <td>FIRS</td>
+                            </tr>
+                            <tr>
+                                <td>Stamp Duties</td>
+                                <td>Flat Rate or Ad Valorem (e.g., 1% for contract agreements)</td>
+                                <td>Transactional</td>
+                                <td>Within 30-40 days of instrument execution</td>
+                                <td>Document inadmissible in court; Fines equivalent to unpaid duty</td>
+                                <td>FIRS</td>
+                            </tr>
+                             <tr>
+                                <td>Personal Income Tax (PIT) / PAYE</td>
+                                <td>7% - 24% (graduated rates on income)</td>
+                                <td>Monthly (remittance); Annual (employer return)</td>
+                                <td>10th day of the following month (remittance); Jan 31st (annual employer return)</td>
+                                <td>₦500,000 (corporate), ₦50,000 (individual) for late annual return; penalties/interest for late remittance</td>
+                                <td>State Inland Revenue Service (SIRS)</td>
+                            </tr>
+                            <tr>
+                                <td>National Housing Fund (NHF) Levy</td>
+                                <td>2.5% of employee's monthly basic salary</td>
+                                <td>Monthly</td>
+                                <td>Within 1 month of deduction</td>
+                                <td>₦50,000 penalty for failure to deduct/remit</td>
+                                <td>Federal Mortgage Bank of Nigeria (FMBN)</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial Training Fund (ITF) Levy</td>
+                                <td>1% of total annual payroll (for ≥5 employees or turnover ≥₦50M)</td>
+                                <td>Annual</td>
+                                <td>April 1st (or Q1)</td>
+                                <td>5% monthly interest on outstanding contributions; Fines/imprisonment for non-compliance</td>
+                                <td>Industrial Training Fund (ITF)</td>
+                            </tr>
+                            <tr>
+                                <td>Pension Contributions</td>
+                                <td>Employer: 10%; Employee: 8% (total 18%) of monthly emoluments</td>
+                                <td>Monthly</td>
+                                <td>Within 7 working days after payday</td>
+                                <td>Not less than 2% of unremitted funds + outstanding remittance</td>
+                                <td>Pension Fund Administrators (PFAs)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="conquering-backlog">
+                <h2>4. Conquering Your Backlog: Step-by-Step Filing on TaxPro Max</h2>
+                <p>Addressing the accumulated tax backlog for Dammie Optimus Solutions requires a systematic approach. It is important to remember that the act of filing all due returns, even if the full payment cannot be made immediately, is a crucial first step. This proactive measure can prevent additional failure-to-file penalties and helps avoid a "best of judgment" (BOJ) assessment by FIRS, which might result in an inflated tax liability.<sup>13</sup> The process for filing overdue returns on TaxPro Max generally follows the same procedures as on-time filings, though the system will flag them as late.</p>
+                <div class="callout warning">
+                    <p><strong>Critical Preparatory Step:</strong> The most critical preparatory step for Dammie Optimus Solutions is to gather all financial records from June 2024 to the present. This includes sales invoices, expense receipts, bank statements, and payroll data (if applicable). Without meticulously compiled and accurate financial data for each missed period, accurate filing is impossible, and any attempt to file could lead to further complications or penalties. This underscores that tax compliance is not merely about navigating a portal, but about maintaining robust underlying financial discipline.</p>
+                </div>
+
+                <h3>Detailed Steps for Filing on TaxPro Max (General Workflow):</h3>
+                <p>The filing process on TaxPro Max follows a consistent workflow across different tax types, which simplifies the learning curve once the initial steps are understood.</p>
+                <ol>
+                    <li><strong>Log In to TaxPro Max:</strong> Access the portal using your registered email and password.<sup>1</sup></li>
+                    <li><strong>Navigate to "Taxes Due":</strong> From your dashboard, click on the "Taxes Due" section. This area will display a list of all your outstanding tax obligations by tax type and period.<sup>3</sup> The system automatically identifies and lists these overdue items, providing a clear scope of the backlog.</li>
+                    <li><strong>Select Tax Type and Period:</strong> For each overdue tax (e.g., VAT, CIT), select the specific tax type and the relevant assessment period (month/year) for which you intend to file.<sup>5</sup></li>
+                    <li><strong>Initiate Filing:</strong> Under the "Action" column corresponding to the selected tax and period, click "Process" to begin the filing procedure.<sup>5</sup></li>
+                    <li><strong>Complete Schedules/Forms:</strong>
+                        <ul>
+                            <li>The system will present various schedules or forms tailored to the chosen tax type. You will need to accurately input the required financial information, such as total sales/income, expenses, and deductions.<sup>1</sup></li>
+                            <li><strong>Important Data Entry Note:</strong> When entering monetary figures, ensure they are input without commas (e.g., enter 30000 not 30,000).<sup>5</sup></li>
+                            <li>The portal is designed to auto-calculate some lines based on your inputs, which can be helpful.<sup>1</sup></li>
+                            <li>For VAT filings: You will typically navigate through specific schedules such as "Goods and Services Exempt," "Zero Rated Goods and Services," and "Sales Adjustments" before the main VAT form is generated.<sup>5</sup></li>
+                            <li>For CIT filings: You will input your total revenue amount and other relevant financial data into the generated Company Income Tax form.<sup>7</sup></li>
+                            <li><strong>Filing Nil Returns:</strong> Even if your company had no taxable transactions or income for a particular period, it is often required to file a "nil" return. This indicates compliance and helps avoid penalties for non-filing. For nil VAT returns, the process involves proceeding through the schedules and declaring zero.<sup>45</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Attach Required Documents:</strong> Upload all necessary supporting documents, such as invoices, receipts, and financial statements, in PDF format. It is important to adhere to specified file sizes and formats, as the portal may reject large or incorrectly formatted files.<sup>1</sup></li>
+                    <li><strong>Review and Declare:</strong> Before final submission, meticulously double-check all entries for accuracy.<sup>1</sup> You will then typically need to click a declaration box to confirm that the information provided is correct and in accordance with relevant tax laws.<sup>5</sup></li>
+                    <li><strong>Confirm and Submit:</strong> A pop-up will usually appear, asking for confirmation of the amount to be paid. If the amount is accurate, click "Ok" and then "Submit".<sup>5</sup> The system will provide a confirmation that your returns have been received.<sup>45</sup></li>
+                </ol>
+
+                <h3>Guidance on Handling Past Periods:</h3>
+                <p>Since Dammie Optimus Solutions was registered in June 2024, it will need to file returns for each month or year that has passed since then for all applicable taxes. For instance, for VAT, filings would be required for July 2024, August 2024, and subsequent months up to the current period. The "Taxes Due" section on TaxPro Max should explicitly indicate all outstanding periods, making the task of identifying the full backlog straightforward.<sup>5</sup></p>
+
+                <h4>Table 3: General Required Documents for Tax Filings</h4>
+                <div class="callout info">
+                    <p>This table helps Dammie Optimus Solutions prepare the necessary information before starting the online filing process, which can prevent frustration and delays. It underscores that effective tax compliance extends beyond just portal navigation to fundamental financial organization.</p>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document Type</th>
+                                <th>Purpose/Applicability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Audited Financial Statements (Profit & Loss, Balance Sheet, Cash Flow Statement)</td>
+                                <td>Essential for Company Income Tax (CIT), Tertiary Education Tax (TET), and National Information Technology Development Levy (NITDL) filings. Provides a comprehensive overview of financial performance.</td>
+                            </tr>
+                            <tr>
+                                <td>Sales Invoices & Receipts</td>
+                                <td>Required for accurate Value Added Tax (VAT) calculations and reporting of turnover for CIT.</td>
+                            </tr>
+                            <tr>
+                                <td>Purchase Invoices & Expense Receipts</td>
+                                <td>Needed for claiming allowable deductions for CIT and for input VAT claims.</td>
+                            </tr>
+                            <tr>
+                                <td>Bank Statements</td>
+                                <td>Provides a consolidated record of all financial transactions, crucial for reconciling income and expenses across all tax types.</td>
+                            </tr>
+                            <tr>
+                                <td>Payroll Records (if applicable)</td>
+                                <td>Necessary for Pay-As-You-Earn (PAYE) calculations, National Housing Fund (NHF), Industrial Training Fund (ITF), and Pension contributions.</td>
+                            </tr>
+                            <tr>
+                                <td>Tax Identification Number (TIN)</td>
+                                <td>Your unique identifier for all tax matters. Essential for portal login and all filings.</td>
+                            </tr>
+                            <tr>
+                                <td>Previous Tax Clearance Certificates (TCCs)</td>
+                                <td>If applicable, for historical reference and to verify prior compliance status.</td>
+                            </tr>
+                            <tr>
+                                <td>Proof of Previous Tax Payments</td>
+                                <td>Receipts or confirmations of any prior tax payments (even if not through TaxPro Max) for reconciliation.</td>
+                            </tr>
+                            <tr>
+                                <td>Contracts & Agreements</td>
+                                <td>Relevant for Stamp Duties assessment and for identifying transactions subject to Withholding Tax (WHT).</td>
+                            </tr>
+                            <tr>
+                                <td>WHT Credit Notes</td>
+                                <td>If WHT has been deducted from payments received by Dammie Optimus Solutions, these notes are needed to claim tax credits against CIT.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="mitigating-penalties">
+                <h2>5. Understanding and Mitigating Penalties for Late Filings</h2>
+                <p>Neglecting tax obligations in Nigeria inevitably leads to significant penalties and interest charges, which accrue rapidly. For Dammie Optimus Solutions, understanding these consequences is crucial to appreciate the urgency of the situation and to plan effective mitigation strategies. It is important to note that penalties and interest generally accrue from the date of default, not from the date a demand notice is issued by the tax authority.<sup>46</sup> This means that the clock on penalties for Dammie Optimus Solutions started ticking from the moment its tax obligations became due after June 2024.</p>
+                <div class="callout danger">
+                    <p><strong>Compounding Penalties:</strong> The compounding nature of penalties is a critical aspect for Dammie Optimus Solutions. Since many penalties are calculated per month or per annum, the longer the delay in filing and payment, the more severe the financial burden becomes. The backlog is not a static problem; it is a growing liability that requires immediate attention to prevent further escalation.</p>
+                </div>
+                
+                <h3>Specific Penalties for Key Federal Taxes:</h3>
+                <ul>
+                    <li><strong>Company Income Tax (CIT):</strong>
+                        <ul>
+                            <li>Late Filing: ₦25,000 (1st month), ₦5,000 (subsequent months).<sup>9</sup></li>
+                            <li>Late Payment: 10% p.a. of tax payable + interest at prevailing bank lending rates.<sup>20</sup></li>
+                            <li>Best of Judgment (BOJ) Assessment: Possible if no returns filed.<sup>13</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Value Added Tax (VAT):</strong>
+                        <ul>
+                            <li>Late Filing: ₦5,000/month<sup>14</sup> or ₦50,000 (1st month) + ₦25,000 (subsequent months).<sup>20</sup></li>
+                            <li>Late Remittance/Non-Payment: 5% p.a. + interest,<sup>9</sup> or 7.5% of VAT + commercial interest rate after 30 days notification.<sup>49</sup></li>
+                            <li>Penalty Accrual: Automatic from original due date.<sup>49</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Withholding Tax (WHT):</strong>
+                        <ul>
+                            <li>Failure to Deduct/Remit: 10% of amount not deducted/remitted + interest.<sup>16</sup></li>
+                            <li>Late Filing: Attracts penalties and interest.<sup>18</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Tertiary Education Tax (TET):</strong>
+                        <ul>
+                            <li>Offences: 1st offence: ₦1M fine or 6 months imprisonment (or both). Subsequent: ₦2M fine or 12 months imprisonment (or both).<sup>21</sup></li>
+                            <li>Late Filing/Payment: Similar to CIT.<sup>10</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>National Information Technology Development Levy (NITDL):</strong>
+                        <ul>
+                            <li>Failure to Pay: Unpaid levy + 10% + interest (after demand note).<sup>26</sup></li>
+                            <li>General Offences: 1st offence: ₦200k fine or 1 year imprisonment. Subsequent: ₦500k fine or 3 years imprisonment.<sup>26</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Stamp Duties:</strong>
+                        <ul>
+                            <li>Non-Compliance: Document inadmissible in court; fines equivalent to unpaid duty.<sup>27</sup></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Strategies for Addressing Accumulated Penalties:</h3>
+                <p>While the penalties appear daunting, proactive engagement can lead to more favorable outcomes.</p>
+                <ul>
+                    <li><strong>Proactive Filing is Paramount:</strong> File all overdue returns accurately and ASAP, even if payment is delayed.<sup>42</sup> This stops "failure-to-file" penalties.</li>
+                    <li><strong>Explore Payment Plans/Installments:</strong> Apply to FIRS in writing for an installment plan if full payment isn't possible (e.g., up to 3 installments for CIT).<sup>11</sup></li>
+                    <li><strong>Request Penalty Abatement/Waiver:</strong>
+                        <ul>
+                            <li>Possible if "reasonable cause" for failure (not willful neglect) can be shown.<sup>48</sup></li>
+                            <li>Good faith payment helps establish reasonable cause.<sup>48</sup></li>
+                            <li>Inquire about potential relief, even if general waivers aren't active.<sup>53</sup></li>
+                            <li>If billed for penalties, send a formal explanation to FIRS or contact them.<sup>48</sup></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="making-payments">
+                <h2>6. Making Payments via TaxPro Max: A Seamless Process</h2>
+                <p>Once tax returns have been filed and the liabilities (including any penalties) determined, the next crucial step is to make the payment. The FIRS TaxPro Max portal offers a seamless and flexible payment process, designed to enhance taxpayer convenience.</p>
+                
+                <h3>Accepted Payment Methods on TaxPro Max:<sup>1</sup></h3>
+                <ul>
+                    <li><strong>Nigerian Banks:</strong> Online banking or physical branch payment with a generated slip.</li>
+                    <li><strong>Remita:</strong> Widely used electronic payment gateway.</li>
+                    <li><strong>Debit/Credit Cards:</strong> Visa and MasterCard typically accepted.</li>
+                </ul>
+                <p>This flexibility in payment methods allows Dammie Optimus Solutions to choose the option most convenient for its operations.</p>
+
+                <h3>Step-by-Step Guide to Completing Payments:</h3>
+                <ol>
+                    <li><strong>Choose "Make Payment":</strong> After filing, the system prompts for payment or provides a payment schedule.<sup>1</sup></li>
+                    <li><strong>Review Amount Due:</strong> Verify the displayed tax description and amount.<sup>5</sup></li>
+                    <li><strong>Click "Pay":</strong> Select "Pay" to initiate.<sup>5</sup></li>
+                    <li><strong>Generate Payment Reference Code (RRR):</strong> System auto-generates a unique RRR for tracking.<sup>3</sup></li>
+                    <li><strong>Select Payment Method:</strong> Options like "Pay Online" (card/Remita) or "Print Payment page and Pay at the bank using Remita" are presented.<sup>5</sup>
+                        <ul>
+                            <li><strong>Online Payment:</strong> Follow prompts for card details or Remita credentials. Usually instant.<sup>1</sup></li>
+                            <li><strong>Bank Payment:</strong> Print the auto-downloaded Payment Reference Slip (with RRR) and take to a bank branch.<sup>5</sup></li>
+                        </ul>
+                    </li>
+                    <li><strong>Confirmation and Record Keeping:</strong> Wait for confirmation (immediate for online). Keep the payment receipt/confirmation.<sup>43</sup> The RRR is vital for reconciliation.</li>
+                </ol>
+            </section>
+
+            <section id="ongoing-compliance">
+                <h2>7. Ensuring Ongoing Compliance: Best Practices for Dammie Optimus Solutions</h2>
+                <p>Clearing the current tax backlog is a critical achievement, but establishing a robust framework for ongoing compliance is equally important for the long-term health and growth of Dammie Optimus Solutions. Tax compliance should be viewed not as a periodic burden, but as an integral and continuous business imperative.</p>
+
+                <div class="key-tax-item">
+                    <h4>Importance of Accurate Record-Keeping</h4>
+                    <p>Maintain organized and accurate financial records (sales invoices, expense receipts, bank statements, payroll data).<sup>9</sup> Nigerian tax laws require businesses to keep records for at least six years.<sup>9</sup></p>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Setting Up Internal Reminders for Future Deadlines</h4>
+                    <p>Establish a robust system (digital calendar, spreadsheet, accounting software integration) for tracking all future tax deadlines (VAT, WHT, PAYE, CIT, TET, NITDL, NHF, ITF, Pension).<sup>9</sup></p>
+                </div>
+                <div class="key-tax-item">
+                    <h4>Utilizing Available Tax Authority Resources</h4>
+                    <ul>
+                        <li>FIRS website: <a href="http://www.firs.gov.ng" target="_blank">www.firs.gov.ng</a> for official info.<sup>2</sup></li>
+                        <li>TaxPro Max portal for all federal tax interactions.<sup>1</sup></li>
+                        <li>FIRS USSD initiative: *829# for quick info (TIN, TCC verification, tax types, office locator).<sup>2</sup></li>
+                        <li>FIRS office visits or anti-corruption line (0907 166 6666 or anti.corruption@firs.gov.ng) for complex issues.<sup>2</sup></li>
+                    </ul>
+                </div>
+                <div class="key-tax-item">
+                    <h4>When to Consider Professional Tax Assistance</h4>
+                    <p>Engage a professional tax consultant for annual filings (especially CIT), complex computations, setting up accounting systems, strategic planning, or navigating disputes.<sup>9</sup> This is a valuable investment, especially for growing SMEs.</p>
+                </div>
+                 <div class="key-tax-item">
+                    <h4>Staying Informed About Tax Law Changes</h4>
+                    <p>Nigerian tax laws are dynamic (e.g., Finance Acts, new regulations).<sup>9</sup> Regularly check FIRS publications, tax alerts from professional firms, and government gazettes.</p>
+                </div>
+            </section>
+
+            <section id="action-plan">
+                <h2>8. Immediate Action Plan for Dammie Optimus Solutions</h2>
+                <p>This checklist provides a clear, actionable roadmap to address the accumulated tax backlog and establish a robust foundation for future compliance.</p>
+                <ol class="action-list">
+                    <li>
+                        <i class="fas fa-folder-open"></i>
+                        <div>
+                            <h4>Gather All Financial Records (June 2024 - Present)</h4>
+                            <p>Collect and organize all sales invoices, expense receipts, bank statements, and payroll records. <strong>Rationale:</strong> Prerequisite for accurate calculations and filings.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-sign-in-alt"></i>
+                        <div>
+                            <h4>Access and Register on FIRS TaxPro Max Portal</h4>
+                            <p>Visit <a href="https://taxpromax.firs.gov.ng/" target="_blank">https://taxpromax.firs.gov.ng/</a>. Register/Sign Up with TIN if not done. Log in. <strong>Rationale:</strong> Official gateway to address backlog.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-search-dollar"></i>
+                        <div>
+                            <h4>Identify All Overdue Filings via "Taxes Due" Section</h4>
+                            <p>On TaxPro Max dashboard, click "Taxes Due." List all outstanding taxes and periods. <strong>Rationale:</strong> Provides precise overview of backlog.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <div>
+                            <h4>Prioritize and File Overdue Returns (Even if Payment is Delayed)</h4>
+                            <p>Start with earliest outstanding periods. Follow Section 4 filing steps for each tax. File accurately even if funds for payment aren't available. <strong>Rationale:</strong> Demonstrates good faith, stops "failure-to-file" penalties, avoids BOJ assessment.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-calculator"></i>
+                        <div>
+                            <h4>Calculate and Understand Your Accumulated Tax Liability</h4>
+                            <p>As returns are filed, TaxPro Max calculates tax due. Keep a running tally of total principal tax. <strong>Rationale:</strong> Essential for financial planning and FIRS discussions.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Address Penalties and Explore Mitigation Options</h4>
+                            <p>Review assessed penalties. If total can't be paid, apply for installment plan. Prepare request for penalty abatement with "reasonable cause." <strong>Rationale:</strong> Proactive engagement can lead to favorable outcomes.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-credit-card"></i>
+                        <div>
+                            <h4>Make Payments</h4>
+                            <p>Prioritize principal tax. Use TaxPro Max payment methods. Capture RRR and retain proof of payment. <strong>Rationale:</strong> Demonstrates compliance, reduces interest accrual.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <h4>Establish a Future Compliance Calendar</h4>
+                            <p>Create detailed calendar/reminders for all upcoming tax deadlines. <strong>Rationale:</strong> Prevents recurrence of backlog, ensures ongoing compliance.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Consider Professional Tax Assistance</h4>
+                            <p>Seriously consider engaging a qualified Nigerian tax consultant. <strong>Rationale:</strong> Invaluable support for navigating backlog, ensuring accuracy, optimizing tax positions, and penalty mitigation.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dammie Optimus Solutions Guide. For informational purposes only. Consult with a qualified professional for tax advice.</p>
+        </div>
+    </footer>
+</body>
+</html>
